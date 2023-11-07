@@ -5,12 +5,20 @@
     Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
     */
 
-    //Entrada
+    let nota;
+
+    do {
+        nota = parseFloat(prompt("Informe uma nota entre zero e dez:"));
+
+        if (isNaN(nota) || nota < 0 || nota > 10) {
+            alert("Valor inválido. Por favor, informe uma nota entre zero e dez.");
+        }
+    } 
+    while (isNaN(nota) || nota < 0 || nota > 10);
+
+    alert("Você informou uma nota válida: " + nota);
 
 
-    //Processamento
 
-
-    //Saída
 
 </script>

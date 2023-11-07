@@ -10,12 +10,34 @@
     Estado Civil: 's', 'c', 'v', 'd';
     */
 
-    //Entrada
+   
+    let nome, idade, salario, sexo, estadoCivil;
 
+do {
+  nome = prompt("Digite seu nome (maior que 3 caracteres):");
+} while (nome.length <= 3);
 
-    //Processamento
+do {
+  idade = parseInt(prompt("Digite sua idade (entre 0 e 150):"));
+} while (idade < 0 || idade > 150);
 
+do {
+  salario = parseFloat(prompt("Digite seu salário (maior que zero):"));
+} while (salario <= 0);
 
-    //Saída
+do {
+  sexo = prompt("Digite seu sexo ('f' ou 'm'):");
+} while (sexo !== 'f' && sexo !== 'm');
+
+do {
+  estadoCivil = prompt("Digite seu estado civil ('s', 'c', 'v' ou 'd'):");
+} while (estadoCivil !== 's' && estadoCivil !== 'c' && estadoCivil !== 'v' && estadoCivil !== 'd');
+
+console.log("Informações válidas:");
+console.log("Nome: " + nome);
+console.log("Idade: " + idade);
+console.log("Salário: " + salario);
+console.log("Sexo: " + sexo);
+console.log("Estado Civil: " + estadoCivil);
 
 </script>
